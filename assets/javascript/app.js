@@ -1,22 +1,15 @@
 count = 10
 let i = 0
-//let j = 0
 let timer
-//let seenQ = []
 let qSet = []
 let randomNumber
-//let randomChoice = []
-//let choice
 let wins = 0
 let losses = 0
 let missed=0
 let isRun = false
 let questionsAvailable = true
-//let timerFlow
 
-
-
-//Object of questions and their options and original styling.
+//Object of questions and their options, original styling and ids.
 const questions = [
     {
         0: 'Which is the largest city in Morocco?',
@@ -146,8 +139,6 @@ const questions = [
         style: "choices waves-effect waves-light btn-large cyan"
     },
 ]
-
-
 
 const qAvailable = () => {
 
@@ -329,6 +320,7 @@ document.querySelector('#play').addEventListener('click', e => {
     selectQuestion()
 })
 
+//resetting the game
 const reset = ()=>{
     document.querySelector('.total').style.display = "none"
     document.querySelector('#intro').style.display = "block"
@@ -339,5 +331,4 @@ const reset = ()=>{
     qSet=[]
     isRun=false
     questionsAvailable=true
-    console.log('hello')
 }
